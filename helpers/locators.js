@@ -6,7 +6,8 @@ export const landingPage = {
     loginButton: "//input[@id = 'login-button']",
     headerText: "//div[@class = 'login_logo']",
     username_field:"//div[@class = 'form_group']//input[@placeholder = 'Username']",
-    password_field: "//div[@class = 'form_group']//input[@placeholder = 'Password']"
+    password_field: "//div[@class = 'form_group']//input[@placeholder = 'Password']",
+    errorMessageContainer: "//div[@class = 'login-box']//div[@class = 'error-message-container error']"
 
 };
 

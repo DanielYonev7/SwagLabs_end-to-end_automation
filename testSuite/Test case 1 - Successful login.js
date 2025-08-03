@@ -1,5 +1,5 @@
 import createDriver from '../helpers/driver.js';
-import {  By, until } from 'selenium-webdriver';
+import { By, until } from 'selenium-webdriver';
 import { homePage, landingPage, locateAndAssertElement } from '../helpers/locators.js';
 import chai, { assert } from 'chai';
 import { expect } from 'chai';
