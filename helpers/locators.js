@@ -1,7 +1,6 @@
 import { By, until } from 'selenium-webdriver';
-export let driver;
 
-export const landingPage = {
+export const landingPage = { //Elements visible on the landing page
 
     loginButton: "//input[@id = 'login-button']",
     headerText: "//div[@class = 'login_logo']",
@@ -11,13 +10,13 @@ export const landingPage = {
 
 };
 
-export const homePage = {
+export const homePage = { //Elements visible on the home page
 
      shoppingCartIcon:"//div[@class = 'primary_header']//div[@id = 'shopping_cart_container']"
 
 };
 
-export const locateAndAssertElement = async (driver, element) => {
+export const locateAndAssertElement = async (driver, element) => { // function that checks if an element is visible on the screen and locating it
 
     let temp = await driver.findElement(By.xpath(element));
     await driver.wait(until.elementIsVisible(temp),5000);

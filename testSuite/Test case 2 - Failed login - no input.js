@@ -1,5 +1,5 @@
 import createDriver from '../helpers/driver.js';
-import {  By, until } from 'selenium-webdriver';
+import { By, until } from 'selenium-webdriver';
 import { landingPage, locateAndAssertElement } from '../helpers/locators.js';
 
 describe('Negative test: Failed login - no input',async function () {
