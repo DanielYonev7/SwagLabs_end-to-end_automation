@@ -16,6 +16,8 @@ export const homePage = { //Elements visible on the home page
 
 };
 
+
+
 export const locateAndAssertElement = async (driver, element) => { // function that checks if an element is visible on the screen and locating it
 
     try{   
@@ -28,7 +30,7 @@ export const locateAndAssertElement = async (driver, element) => { // function t
     }
   }
 
-export const navigateToHomePage = async (driver) => {
+export const navigateToHomePage = async (driver) => { // function that navigates us to the home page and asserts the header text
 
     try{
         await driver.get('https://www.saucedemo.com');

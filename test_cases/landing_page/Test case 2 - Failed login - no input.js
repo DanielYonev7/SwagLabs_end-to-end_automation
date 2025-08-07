@@ -1,6 +1,6 @@
-import createDriver from '../helpers/driver.js';
+import createDriver from '../../helpers/driver.js';
 import { By } from 'selenium-webdriver';
-import { landingPage, locateAndAssertElement, navigateToHomePage } from '../helpers/locators.js';
+import { landingPage, locateAndAssertElement, navigateToHomePage } from '../../helpers/locators.js';
 import assert from 'assert';
 
 

@@ -1,6 +1,6 @@
 module.exports = {
  // reporter: 'node_modules/mochawesome',
-  spec: 'testSuite/**.js',
+  spec: 'test_cases/**/**.js',
   'reporter-option': [
     'overwrite=false',
     'reportTitle=Selenium WD:test',

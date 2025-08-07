@@ -1,6 +1,6 @@
-import createDriver from '../helpers/driver.js';
+import createDriver from '../../helpers/driver.js';
 import { By, until } from 'selenium-webdriver';
-import { homePage, landingPage, locateAndAssertElement, navigateToHomePage } from '../helpers/locators.js';
+import { homePage, landingPage, locateAndAssertElement, navigateToHomePage } from '../../helpers/locators.js';
 
 
 describe('Positive test: Successful login',async function () {
