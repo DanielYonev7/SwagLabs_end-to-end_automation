@@ -1,5 +1,5 @@
 module.exports = {
- // reporter: 'node_modules/mochawesome',
+  //reporter: 'node_modules/mochawesome',
   spec: 'test_cases/**/**.js',
   'reporter-option': [
     'overwrite=false',
