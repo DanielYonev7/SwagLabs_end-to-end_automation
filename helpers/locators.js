@@ -16,7 +16,6 @@ export const homePage = { //Elements visible on the home page
      burgerMenuButton:"//div[@class='bm-burger-button']//button[@id = 'react-burger-menu-btn']",
      productSortContainer:"//div[@class = 'right_component']//span[@class='select_container']//select[@class='product_sort_container']",
      
-
 };
 
 

@@ -3,7 +3,7 @@ import { By, until } from 'selenium-webdriver';
 import { homePage, landingPage, locateAndAssertElement, navigateToHomePage } from '../../helpers/locators.js';
 
 
-describe('Positive test: Successful login',async function () {
+describe('Successful login',async function () {
   let driver;
 
   before(async function () {
@@ -33,6 +33,7 @@ describe('Positive test: Successful login',async function () {
   it('Test case 4: Locate "login" button and click', async function() {
 
     let button = await driver.findElement(By.xpath(landingPage.loginButton));
+    await driver.wait(until.elementIsVisible(button), 5000);
     await button.click();
 
   })
