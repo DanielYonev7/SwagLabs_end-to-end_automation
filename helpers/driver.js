@@ -30,5 +30,4 @@ options.setUserPreferences({
     .setChromeOptions(options)
     .build();
 
-    //test
 }
