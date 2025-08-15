@@ -16,7 +16,7 @@ describe('Successful login',async function () {
 
   it('Test case 2: Enter username: standard_user', async function(){
 
-    let username = await driver.findElement(By.xpath(landingPage.username_field));
+    const username = await driver.findElement(By.xpath(landingPage.username_field));
     await driver.wait(until.elementIsVisible(username), 5000);
     await username.sendKeys("standard_user");
 
@@ -24,7 +24,7 @@ describe('Successful login',async function () {
 
   it('Test case 3: Enter password: secret_sauce', async function() {
 
-    let password = await driver.findElement(By.xpath(landingPage.password_field));
+    const password = await driver.findElement(By.xpath(landingPage.password_field));
     await driver.wait(until.elementIsVisible(password), 5000);
     await password.sendKeys("secret_sauce");
 
@@ -32,7 +32,7 @@ describe('Successful login',async function () {
 
   it('Test case 4: Locate "login" button and click', async function() {
 
-    let button = await driver.findElement(By.xpath(landingPage.loginButton));
+    const button = await driver.findElement(By.xpath(landingPage.loginButton));
     await driver.wait(until.elementIsVisible(button), 5000);
     await button.click();
 

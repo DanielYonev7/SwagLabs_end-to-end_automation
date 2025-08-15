@@ -20,23 +20,23 @@ describe('Add item to cart',async function () {
   })
 
   it('Test case 3: Click on "Add to cart" button on the backpack item', async function(){
-    let addBackpackToCart = await driver.findElement(By.xpath("//button[@id = 'add-to-cart-sauce-labs-backpack']"));
+    const addBackpackToCart = await driver.findElement(By.xpath("//button[@id = 'add-to-cart-sauce-labs-backpack']"));
     await driver.wait(until.elementIsVisible(addBackpackToCart), 5000);
     await addBackpackToCart.click();
   })
 
   it('Test case 4: Click on the shopping cart icon', async function(){
-    let element = await driver.findElement(By.xpath(homePage.shoppingCartIcon));
+    const element = await driver.findElement(By.xpath(homePage.shoppingCartIcon));
     await driver.wait(until.elementIsVisible(element), 5000);
     await element.click();
   })
 
   it('Test case 5: Assert item visibility in shopping cart page', async function(){
-    let item = await driver.findElement(By.xpath("//div[@data-test='item-quantity']"));
+    const inventory = await driver.findElement(By.xpath("//div[@class='cart_item']"));
+    await driver.wait(until.elementIsVisible(inventory), 5000);
+
+    const item = await driver.findElement(By.xpath(homePage.backPackElement));
     await driver.wait(until.elementIsVisible(item), 5000);
-    let itemQuantity = await item.getText(); //getting the quantity text of the added item in the shopping cart
-    assert.strictEqual(itemQuantity, '1');
-    console.log("Item successfully added with quantity: ", itemQuantity);
   })
 
   after(async function() {

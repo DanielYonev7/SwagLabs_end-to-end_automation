@@ -15,6 +15,7 @@ export const homePage = { //Elements visible on the home page
      shoppingCartIcon:"//div[@class = 'primary_header']//div[@id = 'shopping_cart_container']",
      burgerMenuButton:"//div[@class='bm-burger-button']//button[@id = 'react-burger-menu-btn']",
      productSortContainer:"//div[@class = 'right_component']//span[@class='select_container']//select[@class='product_sort_container']",
+     backPackElement: "//a[@id='item_4_title_link']//div[contains(.,'Sauce Labs Backpack')]",
      
 };
 

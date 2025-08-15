@@ -17,7 +17,7 @@ describe('Negative test: Failed login - Username only', async function () {
 
   it('Test case 2: Enter username: test_username', async function(){
 
-    let username = await driver.findElement(By.xpath(landingPage.username_field));
+    const username = await driver.findElement(By.xpath(landingPage.username_field));
     await driver.wait(until.elementIsVisible(username), 5000);
     await username.sendKeys("test_username");
 
@@ -26,15 +26,15 @@ describe('Negative test: Failed login - Username only', async function () {
   it('Test case 3: Locate login button and click', async function(){
 
     await locateAndAssertElement(driver, landingPage.loginButton);
-    let button = await driver.findElement(By.xpath(landingPage.loginButton));
+    const button = await driver.findElement(By.xpath(landingPage.loginButton));
     await button.click();
 
   });
 
   it("Test case 4: Assert correct error message: 'Epic sadface: Password is required'", async function(){
     
-    let currentErrorMessage = await driver.findElement(By.xpath(landingPage.errorMessageContainer));
-    let errorMessageText = await currentErrorMessage.getText();
+    const currentErrorMessage = await driver.findElement(By.xpath(landingPage.errorMessageContainer));
+    const errorMessageText = await currentErrorMessage.getText();
     assert.strictEqual(errorMessageText, 'Epic sadface: Password is required');
     console.log("Text message asserted successfully: ", errorMessageText);
 
