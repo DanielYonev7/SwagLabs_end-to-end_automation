@@ -19,6 +19,9 @@ export const homePage = { //Elements visible on the home page
      
 };
 
+export const shoppingCartPage = {
+    continueShoppingButton: "//div[@class='cart_footer']//button[@id='continue-shopping']"
+}
 
 
 export const locateAndAssertElement = async (driver, element) => { // function that checks if an element is visible on the screen and locating it
