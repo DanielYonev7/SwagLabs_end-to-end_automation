@@ -1,7 +1,7 @@
 import createDriver from '../../helpers/driver.js';
 import { By, until } from 'selenium-webdriver';
-import { homePage, landingPage, locateAndAssertElement, navigateToHomePage } from '../../helpers/locators.js';
-
+import { homePage, landingPage, locateAndAssertElement, navigateToHomePage, locateAndClickElement } from '../../helpers/locators.js';
+import assert from 'assert'
 
 describe('Successful login',async function () {
   let driver;
@@ -32,15 +32,16 @@ describe('Successful login',async function () {
 
   it('Test case 4: Locate "login" button and click', async function() {
 
-    const button = await driver.findElement(By.xpath(landingPage.loginButton));
-    await driver.wait(until.elementIsVisible(button), 5000);
-    await button.click();
-
+    await locateAndClickElement(driver, landingPage.loginButton);
+    
   })
 
   it('Test case 5: Assert successful login', async function() {
 
-    await locateAndAssertElement(driver, homePage.shoppingCartIcon);
+    const productsHeader = await driver.findElement(By.xpath("//span[contains(.,'Products')]"));
+    await driver.wait(until.elementIsVisible(productsHeader), 5000);
+    const visible = await productsHeader.isDisplayed();
+    assert.strictEqual(visible, true, "Element is visible");
 
   })
 

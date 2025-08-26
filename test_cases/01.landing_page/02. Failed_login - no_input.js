@@ -1,6 +1,6 @@
 import createDriver from '../../helpers/driver.js';
 import { By } from 'selenium-webdriver';
-import { landingPage, locateAndAssertElement, navigateToHomePage } from '../../helpers/locators.js';
+import { landingPage, locateAndAssertElement, locateAndClickElement, navigateToHomePage } from '../../helpers/locators.js';
 import assert from 'assert';
 
 
@@ -17,9 +17,7 @@ describe('Negative test: Failed login - no input', async function () {
 
   it('Test case 2: Locate login button and click', async function(){
 
-    await locateAndAssertElement(driver, landingPage.loginButton);
-    const button = await driver.findElement(By.xpath(landingPage.loginButton));
-    await button.click();
+    await locateAndClickElement(driver, landingPage.loginButton);
 
   });
 

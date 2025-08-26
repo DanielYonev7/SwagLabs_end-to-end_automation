@@ -1,6 +1,6 @@
 import createDriver from '../../helpers/driver.js';
 import { By, until } from 'selenium-webdriver';
-import { homePage, navigateToHomePage, shoppingCartPage } from '../../helpers/locators.js';
+import { homePage, locateAndClickElement, navigateToHomePage, shoppingCartPage } from '../../helpers/locators.js';
 import { loginFunction } from '../../helpers/login.js';
 import assert from 'assert';
 
@@ -20,15 +20,11 @@ describe("Check 'Continue Shopping' button functionality",async function () {
   })
 
   it('Test case 3: Click on the shopping cart icon', async function(){
-    const element = await driver.findElement(By.xpath(homePage.shoppingCartIcon));
-    await driver.wait(until.elementIsVisible(element), 5000);
-    await element.click();
+    await locateAndClickElement(driver, homePage.shoppingCartIcon);
   })
 
   it("Test case 4: Assert and click 'Continue Shopping'", async function(){
-    const button = await driver.findElement(By.xpath(shoppingCartPage.continueShoppingButton));
-    await driver.wait(until.elementIsVisible(button), 5000);
-    await button.click();
+    await locateAndClickElement(driver, shoppingCartPage.continueShoppingButton);
   })
 
   it("Test case 5: Assert home page visibility", async function(){

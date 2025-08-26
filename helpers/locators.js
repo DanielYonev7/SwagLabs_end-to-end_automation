@@ -19,8 +19,9 @@ export const homePage = { //Elements visible on the home page
      
 };
 
-export const shoppingCartPage = {
-    continueShoppingButton: "//div[@class='cart_footer']//button[@id='continue-shopping']"
+export const shoppingCartPage = { //ELements visible in the cart page
+    continueShoppingButton: "//div[@class='cart_footer']//button[@id='continue-shopping']",
+    checkoutButton: "//button[@id='checkout']"
 }
 
 
@@ -35,6 +36,21 @@ export const locateAndAssertElement = async (driver, element) => { // function t
         console.log("An error occurred: ", error);
     }
   }
+
+  export const locateAndClickElement = async (driver, element) => { // function that checks if an element is visible on the screen and locating it
+
+    try{   
+        let currentElement = await driver.findElement(By.xpath(element));
+        await driver.wait(until.elementIsVisible(currentElement),5000);
+        console.log("Element located successfully: ", element);
+        await currentElement.click();
+        console.log("Element clicked!");
+    }
+    catch(error){
+        console.log("An error occurred: ", error);
+    }
+  }
+
 
 export const navigateToHomePage = async (driver) => { // function that navigates us to the home page and asserts the header text
 

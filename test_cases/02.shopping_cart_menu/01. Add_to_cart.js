@@ -1,6 +1,6 @@
 import createDriver from '../../helpers/driver.js';
 import { By, until } from 'selenium-webdriver';
-import { homePage, navigateToHomePage } from '../../helpers/locators.js';
+import { homePage, navigateToHomePage, locateAndClickElement } from '../../helpers/locators.js';
 import { loginFunction } from '../../helpers/login.js';
 import assert from 'assert';
 
@@ -26,9 +26,7 @@ describe('Add item to cart',async function () {
   })
 
   it('Test case 4: Click on the shopping cart icon', async function(){
-    const element = await driver.findElement(By.xpath(homePage.shoppingCartIcon));
-    await driver.wait(until.elementIsVisible(element), 5000);
-    await element.click();
+    await locateAndClickElement(driver, homePage.shoppingCartIcon);
   })
 
   it('Test case 5: Assert item visibility in shopping cart page', async function(){
