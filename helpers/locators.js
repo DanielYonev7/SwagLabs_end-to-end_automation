@@ -37,7 +37,7 @@ export const locateAndAssertElement = async (driver, element) => { // function t
     }
   }
 
-  export const locateAndClickElement = async (driver, element) => { // function that checks if an element is visible on the screen and locating it
+  export const locateAndClickElement = async (driver, element) => { // function that checks if an element is visible on the screen and clicking it
 
     try{   
         let currentElement = await driver.findElement(By.xpath(element));
