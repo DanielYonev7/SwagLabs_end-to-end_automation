@@ -33,6 +33,9 @@ describe('Negative test: Failed login - no input', async function () {
     await locateAndClickElement(driver, shoppingCartPage.checkoutButton);
   })
 
+  it("Test case 6: 'Checkout: Your information' - Input 'First Name'", async function(){
+    
+  })
 
 
   after(async function() {
