@@ -4,7 +4,7 @@ import { navigateToHomePage, homePage, shoppingCartPage, locateAndClickElement }
 import assert from 'assert';
 import { loginFunction } from '../../helpers/login.js';
 
-describe('Negative test: Failed login - no input', async function () {
+describe('Successful order', async function () {
   let driver;
 
   before(async function () {

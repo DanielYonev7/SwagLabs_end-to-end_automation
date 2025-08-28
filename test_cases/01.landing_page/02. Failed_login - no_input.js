@@ -4,7 +4,7 @@ import { landingPage, locateAndClickElement, navigateToHomePage } from '../../he
 import assert from 'assert';
 
 
-describe('Negative test: Failed login - no input', async function () {
+describe('Failed login - no input', async function () {
   let driver;
 
   before(async function () {
