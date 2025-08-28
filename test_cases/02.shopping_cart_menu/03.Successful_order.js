@@ -20,17 +20,17 @@ describe('Successful order', async function () {
     })
 
     it('Test case 3: Click on "Add to cart" button on the backpack item', async function(){
-    const addBackpackToCart = await driver.findElement(By.xpath("//button[@id = 'add-to-cart-sauce-labs-backpack']"));
-    await driver.wait(until.elementIsVisible(addBackpackToCart), 5000);
-    await addBackpackToCart.click();
+      const addBackpackToCart = await driver.findElement(By.xpath("//button[@id = 'add-to-cart-sauce-labs-backpack']"));
+      await driver.wait(until.elementIsVisible(addBackpackToCart), 5000);
+      await addBackpackToCart.click();
     })
 
     it('Test case 4: Click on the shopping cart icon', async function(){
-    await locateAndClickElement(driver, homePage.shoppingCartIcon);
+      await locateAndClickElement(driver, homePage.shoppingCartIcon);
     })
 
     it("Test case 5: Locate and click 'Checkout' button", async function(){
-    await locateAndClickElement(driver, shoppingCartPage.checkoutButton);
+      await locateAndClickElement(driver, shoppingCartPage.checkoutButton);
   })
 
   it("Test case 6: 'Checkout: Your information' - Input 'First Name'", async function(){
