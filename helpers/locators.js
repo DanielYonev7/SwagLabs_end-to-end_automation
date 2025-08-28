@@ -24,6 +24,18 @@ export const shoppingCartPage = { //ELements visible in the cart page
     checkoutButton: "//button[@id='checkout']"
 }
 
+export const checkoutInformationPage = { //ELements visible on the 'Checkout: Your Information" page while ordering an item
+    firstNameField: "//input[@placeholder='First Name']",
+    lastNameFIeld: "//input[@placeholder='Last Name']",
+    zipCodeField: "//input[@placeholder='Zip/Postal Code']",
+    cancelButton: "//button[@id='cancel']",
+    continueButton: "//input[@id='continue']",
+    checkoutErrorMessageContainer: "//div[@class='error-message-container error']//h3[@data-test= 'error']"
+}
+
+export const overviewInformationPage = {
+    finishButton: "//button[@id='finish']"
+}
 
 export const locateAndAssertElement = async (driver, element) => { // function that checks if an element is visible on the screen and locating it
 
