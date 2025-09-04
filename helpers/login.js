@@ -36,5 +36,5 @@ export const loginFunction = async(driver) => {
     const productsHeader = await driver.findElement(By.xpath("//span[contains(.,'Products')]"));
         await driver.wait(until.elementIsVisible(productsHeader), 5000);
         const visible = await productsHeader.isDisplayed();
-        assert.strictEqual(visible, true, "Element is visible");
+        assert.strictEqual(visible, true, "Login successful!");
 }
